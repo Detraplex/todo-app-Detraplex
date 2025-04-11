@@ -62,6 +62,12 @@ class Todo:
             print("To-Do List:")
             for i, task in enumerate(self.tasks, start=1):
                 print(f"{i}. {task}")
+            print(f"There are currently {len(self.tasks)} tasks remaining")
+    def mystery(self) -> None:
+        print()
+        print("https://venmo.com/u/Carlos-Villarreal-Elizondo")
+        print(":)")
+
 
 
 def main():
@@ -78,8 +84,9 @@ def main():
         print("1. Add Task")
         print("2. Delete Task")
         print("3. Show Tasks")
-        print("4. Quit")
-        choice = input("Choose an option (1-4): ")
+        print("4. The mystery button")
+        print("5. Quit")
+        choice = input("Choose an option (1-5): ")
 
         if choice == "1":
             task = input("Enter the task: ")
@@ -89,9 +96,11 @@ def main():
             todo.delete_task(task)
         elif choice == "3":
             todo.show_tasks()
-        elif choice == "4":
+        elif choice == "5":
             print("Exiting the application.")
             break
+        elif choice == "4":
+            todo.mystery()
         else:
             print("Invalid choice. Please try again.")
 
